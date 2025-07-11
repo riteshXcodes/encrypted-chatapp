@@ -108,7 +108,7 @@ function App() {
     <div>
 
       <Routes>
-        <Route path="https://encrypted-chatapp.vercel.app/" element={<Home />} />
+        <Route path="/" element={<Home />} />
 
       <Route
         path="/login"
@@ -117,7 +117,7 @@ function App() {
       />
 
       <Route
-        path="https://encrypted-chatapp.vercel.app/chat"
+        path="/chat"
         element={
           token ? (
             <ChatPage
@@ -134,7 +134,7 @@ function App() {
               chat={chat}
             />
           ) : (
-            <Navigate to="https://encrypted-chatapp.vercel.app/login" />
+            <Navigate to="/login" />
           )
         }
         
