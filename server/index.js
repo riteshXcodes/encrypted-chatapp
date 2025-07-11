@@ -6,6 +6,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 const Message = require("./models/message");
 const onlineUsers = new Map();
+const path = require("path");
 
 require("dotenv").config();
 
@@ -14,6 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoutes);
+app.use(express.static(path.join(__dirname, "client", "build")));
 
 app.get("/", (req, res) => {
   res.send("Server is up and running!");
@@ -35,6 +37,10 @@ app.get("/api/messages", async (req, res) => {
     console.error(" Error in fetching messages:", err);
     res.status(500).json({ error: "Failed to load messages" });
   }
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 
