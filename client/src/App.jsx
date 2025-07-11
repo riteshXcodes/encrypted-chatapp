@@ -64,7 +64,7 @@ function App() {
       const { encrypted, iv } = await encryptMessageWithAES(message, aesKey);
 
       const response = await fetch(
-        `http://localhost:5000/api/auth/get-public-key?username=${receiver}`
+        `https://encrypted-chatapp.onrender.com/api/auth/get-public-key?username=${receiver}`
       );
       if (!response.ok) {
         alert("Receiver username not found. Please check spelling!");

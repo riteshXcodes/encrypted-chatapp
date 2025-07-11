@@ -20,7 +20,7 @@ function ChatPage({
   const [allUsers, setAllUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/users")
+    fetch("https://encrypted-chatapp.onrender.com/api/auth/users")
       .then(res => res.json())
       .then(data => setAllUsers(data.users || []));
   }, []);

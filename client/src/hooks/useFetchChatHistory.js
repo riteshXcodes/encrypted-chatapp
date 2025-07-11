@@ -6,7 +6,7 @@ export const useFetchChatHistory = (currentUser, receiver, setChat) => {
     const fetchAndDecryptMessages = async () => {
       if (!currentUser || !receiver) return;
 
-      const res = await fetch(`http://localhost:5000/api/messages?sender=${currentUser}&receiver=${receiver}`);
+      const res = await fetch(`https://encrypted-chatapp.onrender.com/api/messages?sender=${currentUser}&receiver=${receiver}`);
       const messages = await res.json();
       console.log("💾 Messages fetched from DB:", messages);
 

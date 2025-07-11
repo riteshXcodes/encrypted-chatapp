@@ -22,7 +22,7 @@ export const useUserSetup = (socket, currentUser, setCurrentUser) => {
 
         localStorage.setItem(`${currentUser}_privateKey`, privateKey);
 
-        await fetch("http://localhost:5000/api/auth/save-public-key", {
+        await fetch("https://encrypted-chatapp.onrender.com/api/auth/save-public-key", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ username: currentUser, publicKey }),
