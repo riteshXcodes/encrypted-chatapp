@@ -40,7 +40,7 @@ const Navbar = () => {
       <nav className="relative z-10 flex justify-between items-center w-full max-w-6xl mx-auto">
         <ul className="flex space-x-8">
           <li>
-            <a onClick={() => Navigate('/')} 
+            <a href='/' 
                className="relative text-gray-300 hover:text-white transition-all duration-300 font-medium group">
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
@@ -67,7 +67,7 @@ const Navbar = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-300"></div>
               
               <div className="relative flex items-center px-6 py-2 rounded-xl bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border border-gray-700 text-white text-sm font-medium hover:from-gray-800 hover:via-gray-700 hover:to-gray-800 transition-all duration-300 shadow-2xl">
-                <a onClick={() => Navigate('/login')} className="flex items-center">
+                <a href='/login' className="flex items-center">
                   <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent font-semibold">
                     Login/Register
                   </span>
