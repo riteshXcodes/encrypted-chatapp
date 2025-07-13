@@ -107,7 +107,7 @@ function Home() {
           
           <div className="flex space-x-4">
             <button 
-              onClick={() => window.location.href = "/login"}
+              onClick={() => window.location.href = "https://encrypted-chatapp.vercel.app/login"}
               className="group relative px-8 py-4 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-lg font-semibold text-lg shadow-lg hover:shadow-gray-500/50 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 active:scale-95"
             >
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-500 to-gray-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
